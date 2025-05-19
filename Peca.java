@@ -32,5 +32,8 @@ public abstract class Peca {
 	public String getDescricao() {
 		return descricao;
 	}
+		public String toString(int indice) {
+		return indice + " - " + this.descricao;
+	}
 
 }
