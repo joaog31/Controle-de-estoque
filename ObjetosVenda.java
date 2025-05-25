@@ -13,4 +13,6 @@ public interface ObjetosVenda {
 
 	boolean testeVenda(int itensVenda);
 
+	String getDescricao();
+
 }
