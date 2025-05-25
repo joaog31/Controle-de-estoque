@@ -1,6 +1,6 @@
 package classes;
 
-public abstract class Peca {
+public abstract class Peca implements ObjetosVenda{
 	private String descricao;
 	private int quantidade;
 	private int estoqueMinimo;
@@ -13,7 +13,7 @@ public abstract class Peca {
 		this.estoqueMaximo = estoqueMaximo;
 	}
 
-	public abstract void Venda(int numeroItens);
+	public abstract void Venda();
 
 	public void reposicaoEstoque() {
 		if (this.quantidade < this.estoqueMinimo) {
@@ -31,9 +31,6 @@ public abstract class Peca {
 
 	public String getDescricao() {
 		return descricao;
-	}
-	public String toString(int indice) {
-		return indice + " - " + this.descricao;
 	}
 
 }
