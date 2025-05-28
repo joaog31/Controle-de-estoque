@@ -32,14 +32,15 @@ public class RoupaPMG implements Item{
       tamanho = ler.nextLine();
 
       if (tamanho.equals("P") || tamanho.equals("p")) {
-          this.quantidadeP -=;
+          this.quantidadeP -1;
 
       } else if (tamanho.equals("M") || tamanho.equals("m")) {
-          this.quantidadeM -=;
+          this.quantidadeM - 1;
 
       } else if (tamanho.equals("G") || tamanho.equals("g")) {
-          this.quantidadeG -=;
+          this.quantidadeG -1;
       }
+
 
 
 
@@ -47,8 +48,20 @@ public class RoupaPMG implements Item{
 
     @Override
     public void reposicaoEstoque() {
-
+         if (quantidadeP < estoqueMinimo) {
+            quantidadeP = estoqueMaximo;
+            System.out.println("Reposição feita para tamanho P.");
+        }
+        if (quantidadeM < estoqueMinimo) {
+            quantidadeM = estoqueMaximo;
+            System.out.println("Reposição feita para tamanho M.");
+        }
+        if (quantidadeG < estoqueMinimo) {
+            quantidadeG = estoqueMaximo;
+            System.out.println("Reposição feita para tamanho G.");
+        }
     }
+
 
     @Override
     public void informacoesEstoque() {
