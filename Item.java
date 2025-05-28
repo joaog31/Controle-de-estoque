@@ -2,7 +2,7 @@ package classes;
 
 import java.util.Scanner;
 
-public interface ObjetosVenda {// Essa é a classe base para o projeto. a partir dela é possível implementar um vetor e fazer polimosfismo 
+public interface Item {// Essa é a classe base para o projeto. a partir dela é possível implementar um vetor e fazer polimosfismo 
 	Scanner ler = new Scanner(System.in);
 
 	void venda(); // função venda que é implementada em todas as subclasses, dessa forma, o comando venda chamará a venda do objeto instanciado.
