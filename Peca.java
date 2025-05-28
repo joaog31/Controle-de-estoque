@@ -6,9 +6,9 @@ public abstract class Peca implements ObjetosVenda {// A implementação de Obje
 	private int estoqueMinimo;
 	private int estoqueMaximo;
 
-	public Peca(String descricao, int quantidade, int estoqueMinimo, int estoqueMaximo) {
+	public Peca(String descricao, int quantidadeAtual, int estoqueMinimo, int estoqueMaximo) {
 		this.descricao = descricao;
-		this.quantidadeAtual = quantidade;
+		this.quantidadeAtual = quantidadeAtual;
 		this.estoqueMinimo = estoqueMinimo;
 		this.estoqueMaximo = estoqueMaximo;
 	}
