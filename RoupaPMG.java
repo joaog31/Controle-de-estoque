@@ -35,7 +35,7 @@ public class RoupaPMG implements Item{
           this.quantidadeP -1;
 
       } else if (tamanho.equals("M") || tamanho.equals("m")) {
-          this.quantidadeM - 1;
+          this.quantidadeM -1;
 
       } else if (tamanho.equals("G") || tamanho.equals("g")) {
           this.quantidadeG -1;
