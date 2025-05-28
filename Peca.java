@@ -1,6 +1,6 @@
 package classes;
 
-public abstract class Peca implements Item {// A implementação de ObjetosVenda normaliza a classe com base na interface.
+public abstract class Peca implements Item {// A implementação de Item que normaliza a classe com base na interface.
 	private String descricao;
 	private int quantidadeAtual;
 	private int estoqueMinimo;
