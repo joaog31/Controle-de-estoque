@@ -1,32 +1,40 @@
 package classes;
 
-public abstract class Peca implements ObjetosVenda{
+public abstract class Peca implements ObjetosVenda {// A implementação de ObjetosVenda normaliza a classe com base na interface.
 	private String descricao;
-	private int quantidade;
+	private int quantidadeAtual;
 	private int estoqueMinimo;
 	private int estoqueMaximo;
 
 	public Peca(String descricao, int quantidade, int estoqueMinimo, int estoqueMaximo) {
 		this.descricao = descricao;
-		this.quantidade = quantidade;
+		this.quantidadeAtual = quantidade;
 		this.estoqueMinimo = estoqueMinimo;
 		this.estoqueMaximo = estoqueMaximo;
 	}
 
-	public abstract void Venda();
-
-	public void reposicaoEstoque() {
-		if (this.quantidade < this.estoqueMinimo) {
-			this.quantidade = this.estoqueMaximo;
+	public void reposicaoEstoque() {//teste se a quantidade atual em estoque é menor que o estoque mínimo
+		if (this.quantidadeAtual < this.estoqueMinimo) {
+			this.quantidadeAtual = this.estoqueMaximo;
 		}
 	}
 
-	public int getQuantidade() {
-		return quantidade;
+	public abstract void venda();
+
+	public void setQuantidadeAtual(int itensVendidos) {// Atualiza a quantidade de itens em estoque atual.
+		this.quantidadeAtual -= itensVendidos;
 	}
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade -= quantidade;
+	public int getEstoqueMinimo() {
+		return estoqueMinimo;
+	}
+
+	public int getEstoqueMaximo() {
+		return estoqueMaximo;
+	}
+
+	public int getQuantidadeAtual() {
+		return quantidadeAtual;
 	}
 
 	public String getDescricao() {
