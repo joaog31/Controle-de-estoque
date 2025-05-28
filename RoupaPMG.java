@@ -65,6 +65,12 @@ public class RoupaPMG implements Item{
 
     @Override
     public void informacoesEstoque() {
+         System.out.println("Descrição: " + descricao);
+        System.out.println("Quantidade P: " + quantidadeP);
+        System.out.println("Quantidade M: " + quantidadeM);
+        System.out.println("Quantidade G: " + quantidadeG);
+        System.out.println("Estoque mínimo: " + estoqueMinimo);
+        System.out.println("Estoque máximo: " + estoqueMaximo);
 
     }
 
