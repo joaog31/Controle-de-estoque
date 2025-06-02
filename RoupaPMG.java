@@ -11,7 +11,7 @@ public class RoupaPMG implements Item{
   private int estoqueMaximo;
 
   public RoupaPMG(String descricao ,int quantidadeP, int quantidadeG, int quantidadeM, int estoqueMinimo, int estoqueMaximo) {
-      this.descricao= descricao;
+      this.descricao = descricao;
       this.quantidadeG = quantidadeG;
       this.quantidadeM = quantidadeM;
       this.quantidadeP = quantidadeP;
@@ -32,16 +32,15 @@ public class RoupaPMG implements Item{
       tamanho = ler.nextLine();
 
       if (tamanho.equals("P") || tamanho.equals("p")) {
-          this.quantidadeP -1;
+          this.quantidadeP -= 1;
 
       } else if (tamanho.equals("M") || tamanho.equals("m")) {
-          this.quantidadeM -1;
+          this.quantidadeM -= 1;
 
       } else if (tamanho.equals("G") || tamanho.equals("g")) {
-          this.quantidadeG -1;
+          this.quantidadeG -= 1;
+
       }
-
-
 
 
     }
