@@ -26,24 +26,45 @@ public class RoupaPMG implements Item{
 
     @Override
     public void venda() {
-      Scanner ler = new Scanner(System.in);
-      String tamanho;
-      System.out.println("Escolha qual tamanho de roupa você quer comprar,digite P, M ou  G: ");
-      tamanho = ler.nextLine();
+		System.out.println("Esse tipo de item é vendido uma peça por vez: ");
+		System.out.println();
+		int quantidadeVender = 1;
+		if (testeVenda(quantidadeVender)) {
+			String tamanho;
+			System.out.println("Escolha qual tamanho de roupa você quer comprar,digite P, M ou  G: ");
+			System.out.println();	
+			tamanho = ler.nextLine();
+			tamanho = tamanho.toUpperCase();
+			if (tamanho.equals("P") || tamanho.equals("M") || tamanho.equals("G")) {
+				if (tamanho.equals("P")) {
+					if (this.quantidadeP>0) {
+						this.quantidadeP -= 1;
+					}else {
+						System.out.println("Estoque insuficiente");
+					}
+				} else if (tamanho.equals("M")) {
+					if (this.quantidadeM>0) {
+						this.quantidadeM -= 1;
+					}else {
+						System.out.println("Estoque insuficiente");
+					}
 
-      if (tamanho.equals("P") || tamanho.equals("p")) {
-          this.quantidadeP -= 1;
+				} else if (tamanho.equals("G")) {
+					if (this.quantidadeG>0) {
+						this.quantidadeG -= 1;
+					}else {
+						System.out.println("Estoque insuficiente");
+					}
+				}
+			}else {
+				System.out.println("Escolha de tamanho inválida");
+				System.out.println();
+			}
 
-      } else if (tamanho.equals("M") || tamanho.equals("m")) {
-          this.quantidadeM -= 1;
+		}
 
-      } else if (tamanho.equals("G") || tamanho.equals("g")) {
-          this.quantidadeG -= 1;
+	}
 
-      }
-
-
-    }
 
     @Override
     public void reposicaoEstoque() {
@@ -75,6 +96,9 @@ public class RoupaPMG implements Item{
 
     @Override
     public boolean testeVenda(int itensVenda) {
-        return false;
+        if (itensVenda > 0) {
+			return true;
+		}
+		return false;
     }
 }
