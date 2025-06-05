@@ -20,8 +20,5 @@ public class RoupaTamanhoUnico extends Peca implements Item {
                 + getEstoqueMaximo());
     }
 
-    @Override
-    public boolean testeVenda(int itensVenda) {
-        return false;
-    }
+    
 }
