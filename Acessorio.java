@@ -28,8 +28,5 @@ public class Acessorio extends Peca implements Item {
                 + getEstoqueMaximo());
     }
 
-    @Override
-    public boolean testeVenda(int itensVenda) {
-        return false;
-    }
+
 }
