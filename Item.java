@@ -10,8 +10,6 @@ public interface Item {// Essa é a classe base para o projeto. a partir dela é
 	void reposicaoEstoque(); //função reposicaoEstoque também terá mesma simplicidades da venda.
 
 	void informacoesEstoque(); //função informacoesEstoque também terá mesma simplicidades da venda.
-
-	boolean testeVenda(int itensVenda); //função testeVenda trabalha junto com venda, e faz o teste para determinar se a venda é possível diante do estoque.
 	
 	String getDescricao(); //Função é usada para criar o "menu de vendas", por isso deve ser implementado em todas as classes.
 }
