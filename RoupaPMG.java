@@ -94,6 +94,9 @@ public class RoupaPMG implements Item{
 
     @Override
     public boolean testeVenda(int itensVenda) {
-        return itensVenda > 0;
+       if (itensVenda > 0) {
+			return true;
+		}
+		return false;
     }
 }
